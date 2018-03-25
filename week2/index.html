@@ -3,40 +3,36 @@
 <html lang="en">
     <head>
         <title>First Website</title>
-        <meta name="referrer" content="origin">
+        <!-- <meta name="referrer" content="origin"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="./style.css"></link>
         
 
     </head>
     <body>
-        <div class="main-container">
+        <div class="container">
+            <h2>Contact Form</h2>
+            <hr>
             <form method="POST" action="https://formspree.io/chandrasr.palle@gmail.com">
-                <input class="email" type="email" name="email" placeholer="email address">
-                <input class="name" type="text" place holder="Enter name">
-                <textarea class="subject" name="message" placeholder="Your message"></textarea>
-                <button class = "submit" type="submit">Send</button>
-                <div class="result">
-                        Message 
-                    </div>
-            </form>
-
-                <!-- <div>
-                    <label>Email : </label>
-                    <input required class="email" type="Email"/>        
-                </div>                
-                <div>
-                    <label>Subject</label>
-                    <textarea required class="subject" rows="5"></textarea>
+                <div class="form-group">
+                    <label for="SenderEmail1">Email address</label>
+                    <input class="email form-control" type="email"  id="SenderEmail1"name="email" placeholer="email address">
                 </div>
-                <button>Submit</button>
-                <div class="result">
-                    Message 
-                </div>-->
-            
+                <div class="form-group">
+                    <label for="SenderName">Name</label>
+                    <input class="name form-control" name="subject" id="SenderName" type="text" place holder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label for="SenderMessage">Message</label>
+                    <textarea class="subject form-control" name="message" id="SenderMessage" placeholder="Your message" rows="7"></textarea>
+                </div>
+                <button class = "submit btn btn-default" type="submit">Send</button>
+                <div class="result help-block">
+                    Acknowledgement will appear here
+                    </div>
+            </form>  
         </div>
-
-
-
+    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="./main.js"></script>
     </body>
