@@ -1,4 +1,4 @@
-
+ithis is from branch...
 ls
 cd
 mkdir
@@ -14,3 +14,14 @@ tail
 wc
 ctrl + C
 ctrl + Z
+git 
+git log --oneline
+git checkout "id"
+git checkout master
+git checkout -b -------creating a new branch
+git branch
+git merge "branchname" --- do it when the branch is stable
+git merge --abort
+
+:
+
