@@ -14,3 +14,7 @@ tail
 wc
 ctrl + C
 ctrl + Z
+
+
+git push -d branchname locally
+git push -d origin branchname -----from github
