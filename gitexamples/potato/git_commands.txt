@@ -1,0 +1,16 @@
+
+ls
+cd
+mkdir
+mv
+cp
+touch
+cat
+more
+vim :q :wq shift+ZZ
+pwd
+head
+tail
+wc
+ctrl + C
+ctrl + Z
