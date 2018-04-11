@@ -7,7 +7,8 @@ var gameOver = false;
 var btnPlayer1= document.querySelector("#btn-player1");
 var btnPlayer2= document.querySelector("#btn-player2");
 var btnReset= document.querySelector("#btn-reset");
-var playCountInput = document.querySelector("#playCount");
+var playCountInput = document.querySelector("input");
+var playCountDisplay = document.querySelector("#playCount");
 
 btnPlayer1.addEventListener('click',function(){
     if(!gameOver){
@@ -32,15 +33,22 @@ btnPlayer2.addEventListener('click',function(){
 
 });
 btnReset.addEventListener('click',function(){
-    scores = [0,0];
     playCount = 5;
+    playCountDisplay.textContent = playCount;
+    playCountInput.value="";
+    reset();
+});
+playCountInput.addEventListener('change',function(){
+    playCountDisplay.textContent = playCountInput.value;
+    playCount = Number(playCountInput.value);
+    reset();
+});
+
+function reset(){
+    scores = [0,0];
     gameOver = false;
     document.querySelector("#player1").textContent = 0;
     document.querySelector("#player2").textContent = 0;
     document.querySelector("#player1").style.color = "black" ;
     document.querySelector("#player2").style.color = "black" ;
-});
-playCountInput.addEventListener('input',function(){
-    playCount = playCountInput.innerHTML;
-    console.log(playCount);
-});
+}
