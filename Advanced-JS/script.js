@@ -43,3 +43,43 @@ console.log(age);
 
 //reference is passed when you pass object so the value changes
 console.log(fruits.mangos);
+
+//// immediately invoked functions
+(function(){
+    let randNum = Math.random() * 10;
+    console.log("random num "+randNum);
+})();
+
+///closuers
+
+function retirement(age){
+    let a = "retirement age is ";
+    return function(yearBirth){
+        console.log(a + age + " year of Birth is"+ yearBirth);
+    }
+}
+var retirementAge = retirement(60);
+retirementAge(2025);
+retirement(63)(2028);
+
+let retirementAgeUs = retirement(66);
+let retirementAgeGermany = retirement(65);
+retirementAgeUs(2023);
+retirementAgeGermany(2024);
+
+function interviewQuestion(job){
+    return function(name){
+        if( job === "designer"){
+            console.log(name +" can you explain who is "+ job + " ?");
+        }
+        else if(job === "teacher"){
+            console.log(name + " can you explain who is " + job + " ?");
+        }
+        else{
+            console.log(name + " can you explain who is doctor ?");
+        }
+    };
+}
+interviewQuestion('designer')('jhon');
+interviewQuestion('teacher')('jhon');
+interviewQuestion('jahs')('jhon');
