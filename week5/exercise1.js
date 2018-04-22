@@ -8,12 +8,14 @@ btn.addEventListener('click',addTodo);
 
 function addTodo(){
     const input = document.querySelector('input');
-    let li = document.createElement('li');
-    li.textContent= input.value;
-    ulItems.appendChild(li);
+    addListItem(input.value);
     input.value = "";
 }
-
+function addListItem(value){
+    let li = document.createElement('li');
+    li.textContent= value;
+    ulItems.appendChild(li);
+}
 
 
 // let count = 1;
