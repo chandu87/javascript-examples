@@ -13,3 +13,6 @@ const obj2 = {
 }
 const sayHi3 = obj.sayHi.bind(obj2); // we are binding obj2 to obj
 sayHi3();
+
+throw new Error("heloo this is error"); 
+
