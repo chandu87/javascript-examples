@@ -19,4 +19,4 @@ function test2() {
 var t = test2();
 t();
 
-console.log(varInsideTest2);
+//console.log(varInsideTest2);
