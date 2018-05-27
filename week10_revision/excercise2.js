@@ -22,3 +22,4 @@ console.log(tesla.changeSpeed(200));
 console.log(tesla.changeName("BMW"));
 console.log(tesla.getSpeed());
 console.log(tesla.getName());
+
